@@ -1,8 +1,8 @@
 const {workerToPromise, WorkerError} = require('../lib/worker-to-promise')
 const {assert} = require("chai");
 const _ = require('lodash')
-const { join } = require('lodash')
-const { add } = require('./add')
+const {join} = require('lodash')
+const {add} = require('./add')
 const path = require('path')
 
 describe('Worker to promise test', () => {
@@ -75,12 +75,8 @@ describe('Worker to promise test', () => {
       }
     ]
 
-    try {
-      const res = await workerToPromise(workerFunc, [2, 1, 2], dependencies, {})
-      assert.equal(res, 5)
-    } catch (e) {
-      console.log(e)
-    }
+    const res = await workerToPromise(workerFunc, [2, 1, 2], dependencies, {})
+    assert.equal(res, 5)
   })
 
 
