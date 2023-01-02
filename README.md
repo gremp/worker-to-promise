@@ -1,4 +1,4 @@
-#Worker to Promise
+# Worker to Promise
 
 A simple lib that given a function creates a new worker, runs the given function and the result is returned as a promise
 
